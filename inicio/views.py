@@ -10,3 +10,6 @@ def cursos(request):
 
 def contacto(request):
     return render(request,"inicio/contacto.html")
+
+def test(request):
+    return render(request,"inicio/ejemplo.html")
