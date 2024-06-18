@@ -1,0 +1,37 @@
+{% extends "inicio/principal.html" %}
+
+{% block titulo %}Contacto{% endblock titulo %}
+
+{% block contenido %}
+    <h1>Contacto</h1>
+
+    <form>
+        <lablel>Nombre:</lablel>
+        <br/>
+        <input type = "text"/>
+        <br/>
+
+        <lablel>Correo:</lablel>
+        <br/>
+        <input type="email"/>
+        <br/>
+
+        <lablel>Curso:</lablel>
+        <br/>
+        <select>
+            <option>Base de datos</option>
+            <option>Python</option>
+            <option>Ciberseguridad</option>
+            <option>Redes</option>
+        </select>
+        <br/>
+
+        <lablel>Comentarios:</lablel>
+        <br/>
+        <textarea name="textarea" rows="10" cols="50">Escribe algo :3</textarea>
+        <br/>
+
+        <button value="Enviar">Enviar</button>
+    </form>
+{% endblock contenido %}
+
