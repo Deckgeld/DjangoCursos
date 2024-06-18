@@ -17,6 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from inicio import views
+from django.conf import settings
+#permite acceder a las variables MEDIA_URL y MEDIA_ROOT que almacenan la ubicación de nuestras imagenes
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,3 +27,8 @@ urlpatterns = [
     path('contacto/',views.contacto,name="Contacto"),
     path('test/',views.test,name="Test"),
 ]
+
+if settings.DEBUG:
+    from django.conf.urls.static import static
+    urlpatterns += static(settings.MEDIA_URL,
+    document_root=settings.MEDIA_ROOT)

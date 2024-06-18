@@ -8,6 +8,7 @@ class Cursos(models.Model): #Define la estructura de nuestra tabla
     autor = models.TextField()
     precio = models.DecimalField(max_digits=10, decimal_places=2,) #Número con decimales
     likes = models.PositiveIntegerField()
+    imagen = models.ImageField(null=True,upload_to="fotos",verbose_name="Fotografía")
     created = models.DateTimeField(auto_now_add=True) #Fecha y tiempo
     updated = models.DateTimeField(auto_now_add=True)
 
