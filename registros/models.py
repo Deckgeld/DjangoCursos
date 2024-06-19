@@ -15,7 +15,7 @@ class Cursos(models.Model): #Define la estructura de nuestra tabla
     class Meta:
         verbose_name = "Curso"
         verbose_name_plural = "Cursos"
-        ordering = ["-created"]
+        ordering = ["created"]
         #el menos indica que se ordenara del más reciente al mas viejo
     
     def __str__(self):
