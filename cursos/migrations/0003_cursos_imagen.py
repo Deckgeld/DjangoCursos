@@ -6,7 +6,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('registros', '0002_alter_cursos_options_rename_precion_cursos_precio_and_more'),
+        ('cursos', '0002_alter_cursos_options_rename_precion_cursos_precio_and_more'),
     ]
 
     operations = [
