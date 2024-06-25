@@ -19,11 +19,12 @@ from django.urls import path
 from contenido import views
 from django.conf import settings
 #permite acceder a las variables MEDIA_URL y MEDIA_ROOT que almacenan la ubicación de nuestras imagenes
+from cursos import views as views_cursos
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.principal,name="Principal"),
-    path('curso/',views.cursos,name="Curso"),
+    path('curso/',views_cursos.cursos,name="Curso"),
     path('contacto/',views.contacto,name="Contacto"),
     path('test/',views.test,name="Test"),
 ]
