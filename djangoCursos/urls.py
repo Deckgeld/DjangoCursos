@@ -27,6 +27,13 @@ urlpatterns = [
     path('curso/',views_cursos.cursos,name="Curso"),
     path('contacto/',views.contacto,name="Contacto"),
     path('test/',views.test,name="Test"),
+
+    path('consultar1/',views_cursos.consultar1,name="Consultar1"),
+    path('consultar2/',views_cursos.consultar2,name="Consultar2"),
+    path('consultar3/',views_cursos.consultar3,name="Consultar3"),
+    path('consultar4/',views_cursos.consultar4,name="Consultar4"),
+
+    path('formMateria/',views_cursos.formMateria,name="FormMateria"),
 ]
 
 if settings.DEBUG:

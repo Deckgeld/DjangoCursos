@@ -1,0 +1,42 @@
+{% extends "contenido/encabezado.html" %} 
+{% block titulo %}Cursos{% endblock titulo %} 
+
+{% block contenido %}
+<div class="container mt-5">
+  <h1>Cursos</h1>
+  <p>Los cursos a impartir son los siguientes:</p>
+  <br />
+  <ul>
+    <li>Bases de Datos</li>
+    <li>Python</li>
+    <li>Ciberseguridad</li>
+    <li>Redes</li>
+  </ul>
+
+  <div class="row position-static">
+    {% for curso in cursos %}
+      <div class="card m-3" style="width: 18rem">
+        <img
+          src="{{curso.imagen.url}}"
+          class="card-img-top"
+          alt="Curso de Astrología"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{curso.nombre}}</h5>
+          <p class="card-text">
+            {{curso.categoria}} - {{curso.autor}}
+          </p>
+          <p class="card-text">
+            {{curso.likes}} likes - ${{curso.precio}}
+          </p>
+          <a
+            href="#"
+            class="btn btn-primary"
+            >Ir al curso</a
+          >
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  {% endblock contenido %}
+</div>
